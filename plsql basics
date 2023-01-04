@@ -1,0 +1,31 @@
+
+--plsql basics
+set serveroutput on;
+declare
+v_test varchar(20);
+
+BEGIN
+v_test :='Rebellin';
+
+dbms_output.put_line(v_test);
+END;
+
+
+--select query to fetch from plsql
+set serveroutput on
+
+declare
+v_test varchar(25);
+begin
+
+select city into v_test from persons where personid='5';
+
+dbms_output.put_line(v_test);
+
+
+
+END;
+
+
+
+
